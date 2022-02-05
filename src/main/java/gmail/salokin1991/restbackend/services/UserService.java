@@ -26,10 +26,11 @@ public class UserService {
 
     public User getById(String userId) {
         for (User user : users) {
-            if (user.getId().equals(userId)) {
+            if (user.getUserId().equals(userId)) {
                 return user;
             }
         }
-        throw new UsersNotFoundException("Cant find user");
+        throw new UsersNotFoundException("Sorry. This app currently does not allow you to" +
+                " communicate with characters from other universes.");
     }
 }
